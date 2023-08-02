@@ -1,0 +1,446 @@
+/* Start Global Rules */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Fjalla+One&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca&family=Open+Sans:wght@400;500;600;700;800&family=Outfit:wght@300;400;600&family=Red+Hat+Display:wght@500;700;900&family=Roboto:ital,wght@0,400;0,700;0,900;1,700&family=Work+Sans:wght@300;400;500;600;700;800&display=swap');
+
+
+:root {
+    --font-color: #ffffffd2;
+    --hightlight-color: #ddddddb9;
+    --style-color: #8f3021;
+    --sec-color: #3c6f91;
+    --box-color: #3e3e3e;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    
+
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+p {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* End Global Rules */
+
+/* Start Header */
+
+header {
+    padding: 1rem;
+    background-color: var(--style-color);
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+header ul {
+    display: flex;
+
+
+}
+
+header ul li a {
+    padding: 1rem;
+}
+
+header ul li a:hover {
+    background-color: var(--sec-color);
+}
+
+/* End Header */
+
+/* Start Welcome */
+
+main #welcome-section {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(230deg, #111 0%,
+            #111 10%, #352f2f 80%,
+            #3e3e3e 100%);
+    color: var(--font-color);
+    text-align: center;
+    justify-content: center;
+}
+
+
+main #welcome-section h1 {
+    font-weight: 900;
+}
+
+main #welcome-section p {
+    color: var(--style-color);
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 1px;
+
+}
+
+/* End Welcome */
+
+/* Start Protfolio */
+
+main .project {
+    padding: 2rem 0;
+    background-color: var(--sec-color);
+    color: var(--font-color);
+}
+
+main .project .title {
+    border-bottom: 1px solid var(--hightlight-color);
+    text-align: center;
+    width: 70%;
+    margin: 1rem auto;
+    padding: 0.5rem 1rem;
+}
+
+main .project .title h2 {
+    font-size: 1.1rem;
+}
+
+main .project .project-con {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+main .project .project-tile {
+    width: calc(90% / 100%);
+    background-color: var(--box-color);
+    border-radius: 3px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+main .project .project-tile .project-image img {
+    width: 100%;
+    border-radius: 3px 3px 0 0;
+}
+
+main .project .project-tile .text {
+    text-align: center;
+    padding: 1.5rem;
+    position: relative;
+}
+
+main .project .project-tile .text a::before {
+    content: "<";
+    position: relative;
+    left: -10px;
+    display: none;
+}
+
+main .project .project-tile .text a::after {
+    content: "/>";
+    position: relative;
+    left: 10px;
+    display: none;
+}
+
+main .project .project-tile:hover .text a::before,
+main .project .project-tile:hover .text a::after {
+    display: inline;
+    color: orange;
+}
+
+main .project .btn {
+    width: 100%;
+    text-align: center;
+}
+
+main .project .btn button {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    background-color: var(--box-color);
+    border: none;
+    border-radius: 3px;
+    position: relative;
+    transition: background 0.7s ease-in-out;
+}
+
+main .project .btn button a::after {
+    content: ">";
+    position: relative;
+    font-weight: 900;
+    right: -5px;
+    top: 0px;
+    font-size: 1rem;
+    transition: background 0.7s ease-in-out;
+}
+
+main .project .btn button:hover {
+    background-color: var(--style-color);
+}
+
+main .project .btn button:hover a::after {
+    right: -7px;
+}
+
+/* End Protfolio */
+
+/* Start Contact */
+
+main .contact {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: var(--box-color);
+    color: var(--font-color);
+    border-bottom: 7px solid var(--style-color);
+}
+
+main .contact .contact-title {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+main .contact .contact-title h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+
+main .contact .contact-title p {
+    font-weight: lighter;
+    font-size: 0.9rem;
+}
+
+main .contact .social ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+main .contact .social li {
+    margin-bottom: 1rem;
+}
+
+main .contact .social li a {
+    font-size: 1.3rem;
+    transition: 0.7s ease-in-out;
+
+}
+
+main .contact .social li a:hover {
+    padding-left: 1rem;
+}
+
+main .contact .social li:first-of-type a:hover {
+    color: #3450db;
+}
+
+main .contact .social li:nth-of-type(2) a:hover {
+    color: #252424;
+}
+
+main .contact .social li:nth-of-type(3) a:hover {
+    color: #1896ea;
+}
+
+main .contact .social li:nth-of-type(4) a:hover {
+    color: #e22406;
+}
+
+
+
+/* End Contact */
+
+/* Start Footer */
+
+footer {
+    padding: 3rem;
+    background-color: var(--box-color);
+    color: var(--font-color);
+}
+
+footer a:hover {
+    color: #ae6aee;
+}
+
+/* End Footer */
+
+/* Start Media */
+
+
+
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+@media (min-width: 475px) {
+    .container {
+        max-width: 475px;
+    }
+}
+
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+
+    main #welcome-section h1 {
+        font-size: 2.5rem;
+    }
+
+    main #welcome-section p {
+        font-size: 1.25rem;
+
+    }
+
+
+
+    main .project .title {
+        margin-bottom: 2.5rem;
+    }
+    main .project .title h2 {
+        font-size: 2.2rem;
+    }
+
+    main .project .project-con {
+        flex-direction:row;
+    }
+    main .project .project-tile {
+        width: calc(90% / 2);
+    }
+
+
+    main .contact .contact-title h2 {
+        font-size: 2.5rem;
+    }
+    main .contact .contact-title p {
+        font-size: 1.25rem;
+    }
+
+    main .contact .social a {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+
+    main #welcome-section h1 {
+        font-size: 3rem;
+    }
+
+    main #welcome-section p {
+        font-size: 1.5rem;
+
+    }
+
+    main .project .title {
+        margin-bottom: 3rem;
+    }
+    main .project .title h2 {
+        font-size: 3rem;
+    }
+
+    main .project .project-con {
+        flex-direction:row;
+    }
+    main .project .project-tile {
+        width: calc(90% / 3);
+    }
+
+
+
+    main .contact {
+        padding-top: 20rem;
+        padding-bottom: 19rem;
+        max-height: 924.8px;
+    }
+
+    main .contact .contact-title {
+        margin-bottom: 1rem;
+    }
+    main .contact .contact-title h2 {
+        font-size: 4rem;
+    }
+    main .contact .contact-title p {
+        font-size: 2rem;
+    }
+
+    main .contact .social ul {
+        flex-direction: row;
+        justify-content: center;
+        width: 70%;
+        padding: 2rem 1rem;
+        margin: 2rem auto;
+
+    }
+
+    main .contact .social li {
+        width: fit-content;
+        display: inline-flex;
+        padding-right: 1.5rem;
+        font-size: 3rem;
+    }
+    main .contact .social a {
+        font-size: 4rem;
+    }
+
+    main .contact .social li a:hover {
+        padding-left: 0;
+        padding-top: 1rem;
+        
+    }
+
+    footer  {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1536px;
+    }
+}
+
+/* Start Media */
